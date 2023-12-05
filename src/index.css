@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form__input {
+    @apply w-full px-4 py-2 text-xs text-gray-400 focus:text-gray-800 border border-gray-500/30 outline-none
+  }
+
+  .form__form-control {
+    @apply w-full flex flex-col space-y-2
+  }
+
+  .btn-submit {
+    @apply px-3 py-2 rounded-md text-sm bg-rose-500 text-white
+  }
+
+  .btn-reset {
+    @apply px-3 py-2 rounded-md text-sm border border-rose-600 text-rose-500
+  }
+
+  .select__arrow::after, .select__arrow::before {
+    --size: 0.3rem;
+    content: "";
+    position: absolute;
+    right: 1rem;
+    pointer-events: none;
+  }
+
+  .select__arrow::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid black;
+    top: 55%;
+  }
+
+  .select__arrow::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid black;
+    top: 40%;
+  }
+}
